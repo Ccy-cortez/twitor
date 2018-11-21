@@ -1,7 +1,18 @@
+// estas lineas de codigo son para quitar el error 404 que aparece al cargar la pagina desde github ya que ahora el proyecto tiene como url ccy-cortez.github.io
+
+// primero vamos a obtener todo el url
+var url = window.location.href;
+// este es el path donde se encuentra el SW ahora
+var swLocation = '/twitor/sw.js'
 
 //if para la instalacion del SW
+
 if(navigator.serviceWorker){
-    navigator.serviceWorker.register('/sw.js');
+
+    if(url.serviceWorker){
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register(swLocation);
 }
 
 

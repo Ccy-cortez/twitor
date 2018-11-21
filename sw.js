@@ -19,7 +19,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 // Nota: las librerias de terceros se deben de poner en el cache dinamico o inmutable, ya que son archivos que nosotros no vamos a modificar, es recomendable ponerlo ene l inmutable
 // NOTA: en cada uno de estos app shell no deberia de contener algo que no tenga la aplicacion
 const APP_SHELL = [
-    '/',
+   // '/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
