@@ -5,8 +5,8 @@ importScripts('js/sw-utils.js'); // este archivo se debe incluir en el app shell
 
 
 // 1.- declaracion de las tres variables para el cache
-const STATIC_CACHE = 'static-v3';
-const DYNAMIC_CACHE = 'dynamic-v1';
+const STATIC_CACHE = 'static-v4';
+const DYNAMIC_CACHE = 'dynamic-v2';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
 
@@ -78,6 +78,11 @@ self.addEventListener('activate', e => {
             if( key !== STATIC_CACHE && key.includes('static')){
                 return caches.delete(key);
             }
+
+            if( key !== DYNAMIC_CACHE && key.includes('dynamic')){
+                return caches.delete(key);
+            }
+
         });
     });
 
